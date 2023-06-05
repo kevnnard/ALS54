@@ -6,8 +6,8 @@ export default function Home() {
     <main className={styles.main}>
       <div className={styles.description}>
         <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.js</code>
+         Paginá en construcción
+          <code className={styles.code}>AL STUDIO 54</code>
         </p>
         <div>
           <a
@@ -19,11 +19,12 @@ export default function Home() {
             <Image
               src="/vercel.svg"
               alt="Vercel Logo"
-              className={styles.vercelLogo}
+             
               width={100}
               height={24}
               priority
             />
+                <a href="kevnnard.com" target="_blank" className={styles.vercelLogo}>KEVNANRD</a>
           </a>
         </div>
       </div>
@@ -39,7 +40,8 @@ export default function Home() {
         />
       </div>
 
-      <div className={styles.grid}>
+<div></div>
+     <!--  <div className={styles.grid}>
         <a
           href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
           className={styles.card}
@@ -89,7 +91,7 @@ export default function Home() {
             Instantly deploy your Next.js site to a shareable URL with Vercel.
           </p>
         </a>
-      </div>
+      </div> -->
     </main>
   )
 }
