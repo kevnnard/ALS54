@@ -6,7 +6,7 @@ export default function Home() {
     <main className={styles.main}>
       <div className={styles.description}>
         <p>
-         Paginá en construcción
+         Paginá en construcción - 
           <code className={styles.code}>AL STUDIO 54</code>
         </p>
         <div>
