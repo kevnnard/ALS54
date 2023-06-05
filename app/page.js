@@ -16,7 +16,7 @@ export default function Home() {
             rel="noopener noreferrer"
           >
             By{' '}
-                <a href="kevnnard.com" target="_blank" className={styles.vercelLogo}>KEVNANRD</a>
+                <a href="kevnnard.com" target="_blank" >KEVNANRD</a>
           </a>
         </div>
       </div>
