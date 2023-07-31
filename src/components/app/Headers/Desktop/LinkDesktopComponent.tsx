@@ -4,34 +4,29 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-export const LinkComponent = ({
+export const LinkDesktopComponent = ({
   dataLink,
-  index,
 }: {
   dataLink: LinkMenuInterface;
-  index: number;
-}): JSX.Element => {
+}) => {
   const cn = classNames;
-  const [menuStatus, setMenuStatus] = React.useState(false);
-
-  const handleChangeMenu = () => {
-    setMenuStatus((state) => !state);
-  };
+  const [menuStatus, setMenuStatus] = React.useState<boolean>(false);
 
   const classes = {
     menu: cn({
       "translate-y-0": menuStatus,
-      "translate-y-[-100rem]": !menuStatus,
+      "translate-y-[1000rem]": !menuStatus,
     }),
   };
+
   return (
-    // COMPONENT LINK TO NAVIGATION
-    <>
+    <li
+      onMouseEnter={() => setMenuStatus(true)}
+      onMouseLeave={() => setMenuStatus(false)}
+    >
       <Link
         href={dataLink.link}
-        className="flex gap-2 items-center font-extrabold uppercase transition-all"
-        onMouseEnter={handleChangeMenu}
-        onMouseLeave={handleChangeMenu}
+        className="flex h-[10vh] gap-2 items-center font-extrabold uppercase transition-all"
       >
         {/* COMPONENT IMAGE FOR IMAGE IN THE LINK MENU */}
         <Image
@@ -44,13 +39,10 @@ export const LinkComponent = ({
       </Link>
 
       <div
-        className={`${classes.menu} fixed z-[${
-          30 + 1 + index
-        }] top-[5rem] left-0 right-0 bg-red-500 w-full h-[50vh] transition ease-in-out duration-500`}
-        onMouseLeave={handleChangeMenu}
+        className={`${classes.menu} fixed z-[30] top-[5rem] left-0 right-0 bg-red-500 w-full h-[50vh] transition ease-in-out duration-100`}
       >
         {dataLink.iconMenu}
       </div>
-    </>
+    </li>
   );
 };
