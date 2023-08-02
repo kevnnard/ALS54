@@ -38,11 +38,39 @@ export const LinkDesktopComponent = ({
         {dataLink.titleMenu}
       </Link>
 
-      <div
-        className={`${classes.menu} fixed z-[30] top-[5rem] left-0 right-0 bg-red-500 w-full h-[50vh] transition ease-in-out duration-100`}
-      >
-        {dataLink.iconMenu}
-      </div>
+      {dataLink.megaMenu && (
+        <ul
+          className={`${classes.menu} fixed z-[30] top-[5rem] left-0 right-0 bg-white text-black w-[full] h-[50vh] transition ease-in-out duration-100 flex justify-around p-10`}
+        >
+          {dataLink.megaMenu.map(
+            (linkMegaMenu: LinkMegaMenu, index: number) => (
+              <li key={index} className="flex flex-col">
+                <h3 className="font-extrabold uppercase underline text-lg mb-10">
+                  {linkMegaMenu.itemTitle}
+                </h3>
+                <ul className="flex flex-col justify-between">
+                  {linkMegaMenu.itemLinks.map(
+                    (itemLink: ItemLink, index2: number) => (
+                      <li
+                        className="py-2 hover:text-red-400 font-semibold flex gap-2"
+                        key={index2}
+                      >
+                        <Image
+                          src={`/images/icons/${itemLink.icon}.png`}
+                          alt="Menu Link ALS 54 Studio"
+                          width={23}
+                          height={20}
+                        />
+                        <Link href={itemLink.link}>{itemLink.name}</Link>
+                      </li>
+                    )
+                  )}
+                </ul>
+              </li>
+            )
+          )}
+        </ul>
+      )}
     </li>
   );
 };

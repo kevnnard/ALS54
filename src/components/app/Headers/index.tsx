@@ -5,7 +5,7 @@ import { MenuMobileComponent } from "./Mobile";
 
 export const HeaderComponent = () => {
   return (
-    <nav className="bg-primaryBG w-full h-20 sticky top-0 z-[50] flex justify-between items-center px-5">
+    <nav className="bg-black w-full h-20 sticky top-0 z-[50] flex justify-between items-center px-5">
       {/* LOGO BRAND HEADER */}
       <Link href="/">
         <LogoBrandComponent logo="icon" width={110} height={110} />
