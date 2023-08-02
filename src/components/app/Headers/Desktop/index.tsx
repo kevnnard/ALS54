@@ -1,5 +1,5 @@
 import menuDesktop from "@/utils/json/menudesk.json";
-import { LinkDesktopComponent } from "./LinkDesktopComponent";
+import { LinkDesktopComponent } from "./LinkDesktop";
 
 export const MenuDesktopComponent = () => {
   return (
